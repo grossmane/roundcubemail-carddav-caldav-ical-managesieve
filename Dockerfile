@@ -1,7 +1,7 @@
 FROM alunduil/roundcube:1.2.3
 
-ENV http_proxy http://proxy:8080
-ENV https_proxy http://proxy:8080
+#ENV http_proxy http://proxy:8080
+#ENV https_proxy http://proxy:8080
 
 COPY config.inc.php /var/www/config/config.inc.php
 COPY plugins/carddav /var/www/plugins/carddav
@@ -25,5 +25,5 @@ RUN cd /var/www/plugins/calendar/lib/ && \
 #    composer require sabre/http 2.0.0 && \
 #    composer require fkooman/oauth-client
 
-ENV http_proxy=""
-ENV https_proxy=""
+#ENV http_proxy=""
+#ENV https_proxy=""
