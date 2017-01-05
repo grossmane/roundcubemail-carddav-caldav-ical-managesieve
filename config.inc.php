@@ -2,12 +2,20 @@
 
 $config = array();
 
+$config['imap_conn_options'] = array(
+  'ssl'         => array(
+    'verify_peer' => false,
+    'verify_peer_name' => false,
+    'allow_self_signed' => true,
+  ),
+);
+
 $config['managesieve_conn_options'] = [
-    'ssl' => [
-        'verify_peer' => false,
-        'verify_peer_name' => false,
-        'allow_self_signed' => true,
-    ],
+  'ssl' => [
+    'verify_peer' => false,
+    'verify_peer_name' => false,
+    'allow_self_signed' => true,
+  ],
 ];
 
 $config['smtp_port'] = 587;
