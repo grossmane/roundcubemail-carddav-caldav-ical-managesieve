@@ -30,4 +30,4 @@ $config['smtp_conn_options'] = array(
   ),
 );
 
-$config['plugins'] = array('carddav', 'managesieve', 'calendar');
+$config['plugins'] = array('carddav', 'managesieve', 'calendar','password');

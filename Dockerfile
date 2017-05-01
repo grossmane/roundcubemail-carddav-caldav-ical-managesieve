@@ -8,6 +8,7 @@ COPY plugins/carddav /var/www/plugins/carddav
 COPY plugins/calendar /var/www/plugins/calendar
 COPY plugins/libcalendaring /var/www/plugins/libcalendaring
 COPY plugins/managesieve  /var/www/plugins/managesieve
+COPY plugins/password/config.inc.php  /var/www/plugins/password/config.inc.php
 
 COPY vendor /var/www/vendor
 
