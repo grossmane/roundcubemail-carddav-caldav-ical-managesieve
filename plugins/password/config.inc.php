@@ -77,7 +77,7 @@ $config['password_disabled'] = false;
 // ------------------
 // PEAR database DSN for performing the query. By default
 // Roundcube DB settings are used.
-$config['password_db_dsn'] = 'mysql://mysql/postfix';
+// $config['password_db_dsn'] = '';
 
 // The SQL query used to change the password.
 // The query can contain the following macros that will be expanded as follows:
@@ -102,7 +102,7 @@ $config['password_db_dsn'] = 'mysql://mysql/postfix';
 //      %q is replaced with the hashed password before the change
 // Escaping of macros is handled by this module.
 // Default: "SELECT update_passwd(%c, %u)"
-$config['password_query'] = 'call change_password(%l,%d,MD5(%o),MD5(%p))';
+$config['password_query'] = 'call postfix.change_password(%l,%d,MD5(%o),MD5(%p))';
 
 // By default the crypt() function which is used to create the %c
 // parameter uses the md5 algorithm (deprecated, use %P).
